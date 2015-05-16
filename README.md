@@ -1,4 +1,4 @@
-[![logo](https://raw.githubusercontent.com/pascalgrimaud/docker-jenkins/master/jenkins.png)]
+[![logo](https://raw.githubusercontent.com/pascalgrimaud/docker-jenkins/master/jenkins_96x96.png)]
 (https://jenkins-ci.org/)
 
 [![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-jenkins.svg?style=svg)]
