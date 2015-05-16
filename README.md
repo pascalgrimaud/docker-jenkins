@@ -16,6 +16,15 @@ The GitHub project :
   * [pascalgrimaud/docker-ubuntu](https://github.com/pascalgrimaud/docker-jenkins/)
 
 
+What are installed in this container :
+
+  * oracle-java8
+  * git
+  * subversion
+  * ant 1.9.4
+  * maven 3.3.3
+
+
 # Installation
 
 You can clone this project and build with docker command :
@@ -47,7 +56,8 @@ docker run -d -p 8080:8080 pascalgrimaud/jenkins
 Start and mount a volume for all jenkins config at ~/volumes/jenkins/jenkins_home :
 
 ```
-docker run -d -p 8080:8080 -v ~/volumes/jenkins/jenkins_home:/opt/jenkins/jenkins_home
+docker run -d -v ~/volumes/jenkins/jenkins_home:/opt/jenkins/jenkins_home \
+-p 8080:8080 pascalgrimaud/jenkins
 ```
 
 
