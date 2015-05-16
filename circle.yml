@@ -7,6 +7,6 @@ dependencies:
     - docker build -t pascalgrimaud/jenkins .
 test:
   override:
-    - docker run -d -p 18080:8080 --name=jenkins -v ~/volumes/jenkins/jenkins_home:/opt/jenkins/jenkins_home pascalgrimaud/jenkins ; sleep 30
+    - docker run -d -p 18080:8080 --name=jenkins -v ~/volumes/jenkins/jenkins_home:/opt/jenkins/jenkins_home pascalgrimaud/jenkins ; sleep 90
     - docker logs jenkins
     - curl -I http://localhost:18080 | grep "HTTP/1.1 200 OK"
