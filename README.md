@@ -13,7 +13,7 @@ The base docker image :
 
 The GitHub project :
 
-  * [pascalgrimaud/docker-ubuntu](https://github.com/pascalgrimaud/docker-jenkins/)
+  * [pascalgrimaud/docker-jenkins](https://github.com/pascalgrimaud/docker-jenkins/)
 
 
 What are installed in this container :
