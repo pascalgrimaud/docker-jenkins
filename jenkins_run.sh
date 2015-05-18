@@ -13,4 +13,5 @@ echo "MAVEN 3.3.3  : /opt/maven"
 echo ""
 echo "######################################################################"
 
+# start Jenkins
 exec java -jar /opt/jenkins/jenkins.war
