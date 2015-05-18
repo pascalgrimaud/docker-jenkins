@@ -41,15 +41,18 @@ ENV MAVEN_HOME /opt/maven
 #--------------------
 
 # configuration
-ADD jenkins_run.sh /jenkins_run.sh
-RUN chmod 755 /*.sh
 ADD settings.xml /root/.m2/settings.xml
 
 # clean
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# expose ports
+EXPOSE 8080 50000
+
 # add volumes to allow backup of config
 VOLUME ["/opt/jenkins/jenkins_home"]
 
-EXPOSE 8080 50000
+# script to start the container
+ADD jenkins_run.sh /jenkins_run.sh
+RUN chmod 755 /*.sh
 CMD ["/jenkins_run.sh"]
