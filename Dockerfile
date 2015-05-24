@@ -17,10 +17,7 @@ RUN mv /tmp/jenkins.war /opt/jenkins/jenkins.war
 ENV JENKINS_HOME /opt/jenkins/jenkins_home
 
 #----- optional -----
-# install git
-RUN add-apt-repository ppa:git-core/ppa -y
-RUN apt-get -y -qq update
-RUN apt-get -y install git
+# git already installed
 
 # install svn
 RUN apt-get -y install subversion
