@@ -26,16 +26,21 @@ RUN apt-get -y install subversion
 RUN wget -O /tmp/apache-ant-1.9.4-bin.tar.gz https://www.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz
 RUN echo "90c0d07d345a650f026107212c0be6af /tmp/apache-ant-1.9.4-bin.tar.gz" | md5sum -c
 RUN tar xzf /tmp/apache-ant-1.9.4-bin.tar.gz -C /opt/
-RUN ln -s /opt/apache-ant-1.9.4 /opt/ant
-ENV ANT_HOME /opt/ant
 
 # install maven
 RUN wget -O /tmp/apache-maven-3.3.3-bin.tar.gz http://archive.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
 RUN echo "794b3b7961200c542a7292682d21ba36 /tmp/apache-maven-3.3.3-bin.tar.gz" | md5sum -c
 RUN tar xzf /tmp/apache-maven-3.3.3-bin.tar.gz -C /opt/
-RUN ln -s /opt/apache-maven-3.3.3 /opt/maven
-ENV MAVEN_HOME /opt/maven
 #--------------------
+
+# link
+RUN ln -s /usr/lib/jvm/java-8-oracle /opt/java8
+RUN ln -s /opt/apache-ant-1.9.4 /opt/ant
+RUN ln -s /opt/apache-maven-3.3.3 /opt/maven
+
+# env
+ENV ANT_HOME /opt/ant
+ENV MAVEN_HOME /opt/maven
 
 # configuration
 ADD settings.xml /root/.m2/settings.xml
