@@ -1,7 +1,7 @@
 [![logo](https://raw.githubusercontent.com/pascalgrimaud/docker-jenkins/master/jenkins_96x96.png)]
 (https://jenkins-ci.org/)
 
-[![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-jenkins.svg?style=svg)]
+[![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-jenkins.svg?style=shield)]
 (https://circleci.com/gh/pascalgrimaud/docker-jenkins)
 
 
@@ -21,7 +21,7 @@ What are installed in this container :
   * oracle-java8
   * git
   * subversion
-  * ant 1.9.4
+  * ant 1.9.5
   * maven 3.3.3
 
 
